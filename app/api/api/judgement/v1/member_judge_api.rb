@@ -25,22 +25,31 @@ module API
         end
 
         params do
-          # requires :member_candidates, type:
-          requires :member_name
-          requires :event_planning, type: Integer
-          requires :cogitation, type: Integer
-          requires :coordination, type: Integer
-          requires :programming_ability, type: Integer
-          requires :infrastructure_knowledge, type: Integer
+          requires :member_candidates, type: Array do
+            requires :member_name, type: String
+            requires :event_planning, type: Integer
+            requires :cogitation, type: Integer
+            requires :coordination, type: Integer
+            requires :programming_ability, type: Integer
+            requires :infrastructure_knowledge, type: Integer
+          end
         end
 
         post '/' do
-          member_name =  params[:member_name]
-          event_planning = params[:event_planning]
-          cogitation = params[:cogitation]
-          coordination = params[:coordination]
-          programming_ability = params[:programming_ability]
-          infrastructure_knowledge = params[:infrastructure_knowledge]
+          member_candidates = params[:member_candidates]
+          def ListResults
+            judeged_candidates_results = []
+          end
+
+
+          member_candidates.each do |member|
+
+          member_name =  member[:member_name]
+          event_planning = member[:event_planning]
+          cogitation = member[:cogitation]
+          coordination = member[:coordination]
+          programming_ability = member[:programming_ability]
+          infrastructure_knowledge = member[:infrastructure_knowledge]
 
           # バリデーション
             # パラメータ必須チェック
@@ -120,8 +129,15 @@ module API
 
 
           end
+          end
 
-
+          # resource :judged_candidates_results do
+          #   desc 'GET /api/v1/member_judge_entity'
+          #   get '/' do
+          #   end
+          #   post '/' do
+          #
+          #   end
         end
 
       end
