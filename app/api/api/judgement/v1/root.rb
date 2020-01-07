@@ -1,7 +1,8 @@
 module API
   module JUDGEMENT
     module V1
-      class MemberJudgeApi < Grape::API
+      class Root < Grape::API
+        mount V1::MemberJudgeAPI
       end
     end
   end
