@@ -1,5 +1,5 @@
 module API
-  module JUDGEMENT
+  module Judgement
     module V1
       class MemberJudgeAPI < Grape::API
         format :json
@@ -23,6 +23,7 @@ module API
             rack_response({ message: e.message, status: 500 }.to_json, 500)
           end
         end
+
 
         params do
           requires :member_candidates, type: Array do
@@ -113,6 +114,7 @@ module API
             # get '/' do
             # present judged_candidates_results, with: Entity::V1::MemberJudgeEntity
             # end
+
 
           end
         # end

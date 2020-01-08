@@ -1,5 +1,5 @@
 module API
-  module JUDGEMENT
+  module Judgement
     class NoRoute < Grape::API
     end
   end

@@ -1,6 +1,6 @@
 module API
   class EndpointJudgement < Grape::API
-    mount JUDGEMENT::V1::Root
-    mount JUDGEMENT::NoRoute
+    mount Judgement::V1::Root
+    mount Judgement::NoRoute
   end
 end
