@@ -108,7 +108,7 @@ module API
 
             end
 
-            {"judged_candidates_resultsjudged" => judged_candidates_results}
+            {"judged_candidates_results" => judged_candidates_results}
 
             # get '/' do
             # present judged_candidates_results, with: Entity::V1::MemberJudgeEntity
