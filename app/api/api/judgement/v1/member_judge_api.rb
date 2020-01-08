@@ -7,11 +7,11 @@ module API
 
         params do
           requires :member_candidates, type: Array do
-            requires :member_name, type: String
-            requires :event_planning, type: Integer
-            requires :cogitation, type: Integer
-            requires :coordination, type: Integer
-            requires :programming_ability, type: Integer
+            requires :member_name,              type: String
+            requires :event_planning,           type: Integer
+            requires :cogitation,               type: Integer
+            requires :coordination,             type: Integer
+            requires :programming_ability,      type: Integer
             requires :infrastructure_knowledge, type: Integer
           end
         end
@@ -20,13 +20,13 @@ module API
 
         # resource :judged_candidates_results do
 
-          post '/' do
-            member_candidates = params[:member_candidates]
+        post '/' do
+          member_candidates = params[:member_candidates]
 
-            judged_candidates_results = []
-            judged_result = MemberJudgeAPI.new
+          judged_candidates_results = []
+          judged_result = MemberJudgeAPI.new
 
-            member_candidates.each do |member|
+          member_candidates.each do |member|
 
 
             member_name =  member[:member_name]
@@ -87,16 +87,16 @@ module API
 
             judged_candidates_results.push(judged_result)
 
-            end
-
-            {"judged_candidates_results" => judged_candidates_results}
-
-            # get '/' do
-            # present judged_candidates_results, with: Entity::V1::MemberJudgeEntity
-            # end
-
-
           end
+
+          {"judged_candidates_results" => judged_candidates_results}
+
+          # get '/' do
+          # present judged_candidates_results, with: Entity::V1::MemberJudgeEntity
+          # end
+
+
+        end
         # end
       end
     end
