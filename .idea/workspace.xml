@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="fa67f020-fa76-473c-a32a-e16573ace212" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/api/endpoint_judgement.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/api/endpoint_judgement.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/api/judgement/no_route.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/api/judgement/no_route.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/api/api/judgement/v1/member_judge_api.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/api/judgement/v1/member_judge_api.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/api/api/judgement/v1/root.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/api/judgement/v1/root.rb" afterDir="false" />
     </list>
@@ -84,14 +82,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="rb" value="1858" />
-          <entry key="txt" value="183" />
+          <entry key="rb" value="1861" />
+          <entry key="txt" value="292" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="213" />
-          <entry key="Ruby" value="1828" />
+          <entry key="PLAIN_TEXT" value="322" />
+          <entry key="Ruby" value="1831" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.lifecycle.project">
@@ -108,11 +106,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/api/api/judgement/v1/member_judge_api.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="33" column="1" lean-forward="true" selection-start-line="33" selection-start-column="1" selection-end-line="33" selection-end-column="1" />
+            <state relative-caret-position="75">
+              <caret line="5" column="28" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -144,11 +142,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/api/api/judgement/v1/root.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+            <state relative-caret-position="180">
+              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
             </state>
           </provider>
         </entry>
@@ -193,9 +191,10 @@
         <option value="$PROJECT_DIR$/app/api/api/entity/v1/member_judge_entity.rb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/api/api/judgement/no_route.rb" />
-        <option value="$PROJECT_DIR$/app/api/api/judgement/v1/root.rb" />
-        <option value="$PROJECT_DIR$/app/api/api/judgement/v1/member_judge_api.rb" />
         <option value="$PROJECT_DIR$/app/api/api/endpoint_judgement.rb" />
+        <option value="$PROJECT_DIR$/app/api/api/judgement/v1/common/message_definition.rb" />
+        <option value="$PROJECT_DIR$/app/api/api/judgement/v1/member_judge_api.rb" />
+        <option value="$PROJECT_DIR$/app/api/api/judgement/v1/root.rb" />
       </list>
     </option>
   </component>
@@ -280,6 +279,16 @@
               <item name="api" type="462c0819:PsiDirectoryNode" />
               <item name="judgement" type="462c0819:PsiDirectoryNode" />
               <item name="v1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sampleApp_api_pra2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sampleApp_api_pra2" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="judgement" type="462c0819:PsiDirectoryNode" />
+              <item name="v1" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="sampleApp_api_pra2" type="b2602c69:ProjectViewProjectNode" />
@@ -444,7 +453,7 @@
       <workItem from="1577579786459" duration="572000" />
       <workItem from="1578113489828" duration="14924000" />
       <workItem from="1578229934178" duration="3280000" />
-      <workItem from="1578443594726" duration="11174000" />
+      <workItem from="1578443594726" duration="11730000" />
     </task>
     <task id="LOCAL-00001" summary="[add]API及び判定logicの完成&#10;&#10;APIクラスにlogicを記載した状態（他ディレクトリへ切り出しを行っていない）">
       <created>1578457557311</created>
@@ -460,11 +469,25 @@
       <option name="project" value="LOCAL" />
       <updated>1578457903046</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="[fix]classとmoduleの表記変更&#10;&#10;[mod]キャメルケースで記載">
+      <created>1578461269430</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1578461269430</updated>
+    </task>
+    <task id="LOCAL-00004" summary="[fix]classの表記変更&#10;&#10;[mod]定数管理のmoduleのため、Grape::APIを継承しないように変更">
+      <created>1578461467707</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1578461467707</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57571000" />
+    <option name="totallyTimeSpent" value="58127000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="2009" y="-1057" width="960" height="1057" extended-state="0" />
@@ -504,7 +527,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="[add]API及び判定logicの完成&#10;&#10;APIクラスにlogicを記載した状態（他ディレクトリへ切り出しを行っていない）" />
     <MESSAGE value="[add]API及び判定logicの完成&#10;&#10;APIクラスにlogicを記載した状態（他ディレクトリへ切り出しを行っていない）&#10;に追加で、1行表記ミスを編集&#10;該当箇所：member_judge_api.rbの、111行目&#10;変更内容：&quot;judged_candidates_resultsjudged&quot; → &quot;judged_candidates_results&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="[add]API及び判定logicの完成&#10;&#10;APIクラスにlogicを記載した状態（他ディレクトリへ切り出しを行っていない）&#10;に追加で、1行表記ミスを編集&#10;該当箇所：member_judge_api.rbの、111行目&#10;変更内容：&quot;judged_candidates_resultsjudged&quot; → &quot;judged_candidates_results&quot;" />
+    <MESSAGE value="[fix]classとmoduleの表記変更&#10;&#10;[mod]キャメルケースで記載" />
+    <MESSAGE value="[fix]classの表記変更&#10;&#10;[mod]定数管理のmoduleのため、Grape::APIを継承しないように変更" />
+    <option name="LAST_COMMIT_MESSAGE" value="[fix]classの表記変更&#10;&#10;[mod]定数管理のmoduleのため、Grape::APIを継承しないように変更" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/docker-compose.yml">
@@ -604,6 +629,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/api/api/judgement/no_route.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="3" lean-forward="true" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/api/api/judgement/v1/common/message_definition.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -611,10 +643,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/api/api/judgement/no_route.rb">
+    <entry file="file://$PROJECT_DIR$/app/api/api/judgement/v1/member_judge_api.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
-          <caret line="5" column="3" lean-forward="true" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
+          <caret line="5" column="28" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
         </state>
       </provider>
     </entry>
@@ -627,15 +659,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/api/api/judgement/v1/root.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/api/api/judgement/v1/member_judge_api.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" column="1" lean-forward="true" selection-start-line="33" selection-start-column="1" selection-end-line="33" selection-end-column="1" />
+        <state relative-caret-position="180">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
         </state>
       </provider>
     </entry>
