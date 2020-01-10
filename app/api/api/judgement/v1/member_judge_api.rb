@@ -5,7 +5,6 @@ module API
         format :json
         default_format :json
 
-        require './app/api/services/memeber_judge_service.rb'
         include Services
 
         # helpers do
