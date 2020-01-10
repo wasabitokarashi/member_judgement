@@ -70,7 +70,6 @@ module Services
 
         {judged_candidates_results: @judged_candidates_results}
 
-
       end
     end
   end
