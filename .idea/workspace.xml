@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fa67f020-fa76-473c-a32a-e16573ace212" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/api/judgement/v1/common/message_definition.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/api/judgement/v1/common/message_definition.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/api/judgement/v1/member_judge_api.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/api/judgement/v1/member_judge_api.rb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -41,10 +41,12 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="rb" value="6" />
+          <entry key="txt" value="126" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
+          <entry key="PLAIN_TEXT" value="126" />
           <entry key="Ruby" value="6" />
         </counts>
       </usages-collector>
@@ -55,20 +57,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/api/api/judgement/v1/member_judge_api.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1125">
-              <caret line="75" column="44" selection-start-line="75" selection-start-column="44" selection-end-line="75" selection-end-column="44" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/api/api/judgement/v1/root.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" selection-start-line="20" selection-end-line="20" />
+            <state relative-caret-position="318">
+              <caret line="68" column="13" lean-forward="true" selection-start-line="68" selection-start-column="13" selection-end-line="68" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -78,24 +71,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="15">
               <caret line="29" selection-start-line="29" selection-end-line="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/api/api/judgement/v1/common/message_definition.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/log/development.log">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="872160">
-              <caret line="58144" column="17" selection-start-line="58144" selection-start-column="17" selection-end-line="58144" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -132,9 +107,9 @@
         <option value="$PROJECT_DIR$/app/api/api/judgement/v1/memeber_judge_service.rb" />
         <option value="$PROJECT_DIR$/app/api/api/services/memeber_judge_service.rb" />
         <option value="$PROJECT_DIR$/app/api/api/judgement/v1/root.rb" />
-        <option value="$PROJECT_DIR$/app/api/api/judgement/v1/member_judge_api.rb" />
         <option value="$PROJECT_DIR$/app/api/services/memeber_judge_service.rb" />
         <option value="$PROJECT_DIR$/app/api/api/judgement/v1/common/message_definition.rb" />
+        <option value="$PROJECT_DIR$/app/api/api/judgement/v1/member_judge_api.rb" />
       </list>
     </option>
   </component>
@@ -376,21 +351,21 @@
       <workItem from="1578551848674" duration="10278000" />
       <workItem from="1578568236305" duration="5173000" />
       <workItem from="1578617179214" duration="6752000" />
-      <workItem from="1578636978412" duration="329000" />
+      <workItem from="1578636978412" duration="847000" />
     </task>
-    <task id="LOCAL-00001" summary="[add]API及び判定logicの完成&#10;&#10;APIクラスにlogicを記載した状態（他ディレクトリへ切り出しを行っていない）">
-      <created>1578457557311</created>
+    <task id="LOCAL-00001" summary="[other]classからmoduleへの記載変更&#10;&#10;[mod]定数切り出しの勉強の際に使うかもしれないので一応置いておきます">
+      <created>1578637371339</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1578457557311</updated>
+      <updated>1578637371339</updated>
     </task>
-    <task id="LOCAL-00002" summary="[add]API及び判定logicの完成&#10;&#10;APIクラスにlogicを記載した状態（他ディレクトリへ切り出しを行っていない）&#10;に追加で、1行表記ミスを編集&#10;該当箇所：member_judge_api.rbの、111行目&#10;変更内容：&quot;judged_candidates_resultsjudged&quot; → &quot;judged_candidates_results&quot;">
-      <created>1578457903046</created>
+    <task id="LOCAL-00002" summary="[other]不要なインスタンスの削除&#10;&#10;[mod]MemberJudgeAPIクラスでnewしていたインスタンスを削除">
+      <created>1578637639476</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1578457903046</updated>
+      <updated>1578637639476</updated>
     </task>
     <task id="LOCAL-00003" summary="[fix]classとmoduleの表記変更&#10;&#10;[mod]キャメルケースで記載">
       <created>1578461269430</created>
@@ -441,10 +416,11 @@
       <option name="project" value="LOCAL" />
       <updated>1578621814212</updated>
     </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2050000" />
+    <option name="totallyTimeSpent" value="2568000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1049" y="-1057" width="1920" height="1057" extended-state="6" />
@@ -491,20 +467,15 @@
     <MESSAGE value="[other]ハッシュ形式のデータの表記変更&#10;&#10;[mod]" />
     <MESSAGE value="[other]validationと本処理をserviceクラスへ切り出し&#10;&#10;[mod]" />
     <MESSAGE value="[fix]本処理の記載修正&#10;&#10;[mod]合計の記載をif文中ではなく、先に定義するように記載" />
-    <option name="LAST_COMMIT_MESSAGE" value="[fix]本処理の記載修正&#10;&#10;[mod]合計の記載をif文中ではなく、先に定義するように記載" />
+    <MESSAGE value="[other]classからmoduleへの記載変更&#10;&#10;[mod]定数切り出しの勉強の際に使うかもしれないので一応置いておきます" />
+    <MESSAGE value="[other]不要なインスタンスの削除&#10;&#10;[mod]MemberJudgeAPIクラスでnewしていたインスタンスを削除" />
+    <option name="LAST_COMMIT_MESSAGE" value="[other]不要なインスタンスの削除&#10;&#10;[mod]MemberJudgeAPIクラスでnewしていたインスタンスを削除" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4253">
           <caret line="514" column="86" lean-forward="true" selection-start-line="514" selection-start-column="86" selection-end-line="514" selection-end-column="86" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/api/api/judgement/v1/member_judge_api.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1125">
-          <caret line="75" column="44" selection-start-line="75" selection-start-column="44" selection-end-line="75" selection-end-column="44" />
         </state>
       </provider>
     </entry>
@@ -522,6 +493,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/api/api/judgement/v1/common/message_definition.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/api/services/memeber_judge_service.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -529,10 +507,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/api/api/judgement/v1/common/message_definition.rb">
+    <entry file="file://$PROJECT_DIR$/app/api/api/judgement/v1/member_judge_api.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="318">
+          <caret line="68" column="13" lean-forward="true" selection-start-line="68" selection-start-column="13" selection-end-line="68" selection-end-column="13" />
         </state>
       </provider>
     </entry>
