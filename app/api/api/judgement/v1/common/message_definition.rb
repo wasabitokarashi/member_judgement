@@ -1,7 +1,7 @@
 module API
   module JUDGEMENT
     module V1
-      class MessageDefinition
+      module MessageDefinition
       end
     end
   end
