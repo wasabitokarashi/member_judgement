@@ -67,9 +67,6 @@ module Services
         @judged_candidates_results.push(judged_result)
 
         end
-
-        {judged_candidates_results: @judged_candidates_results}
-
       end
     end
   end
