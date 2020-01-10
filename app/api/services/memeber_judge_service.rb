@@ -23,6 +23,7 @@ module Services
         coordination             = member[:coordination]
         programming_ability      = member[:programming_ability]
         infrastructure_knowledge = member[:infrastructure_knowledge]
+        skill_sum = event_planning + cogitation + coordination + programming_ability + infrastructure_knowledge
 
         # バリデーション
         # パラメータ必須チェック
@@ -70,7 +71,7 @@ module Services
           # 本処理
 
         elsif
-        event_planning <= 1 || cogitation <= 1 || coordination <= 1 || event_planning + cogitation + coordination + programming_ability + infrastructure_knowledge <= 10
+        event_planning <= 1 || cogitation <= 1 || coordination <= 1 || skill_sum <= 10
           judged_result = {"member_name": member_name, "enlisted_propriety": false}
         else
           judged_result = {"member_name": member_name, "enlisted_propriety": true}
