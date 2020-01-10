@@ -71,7 +71,7 @@ module Services
           # 本処理
 
         elsif
-        event_planning <= 1 || cogitation <= 1 || coordination <= 1 || skill_sum <= 10
+        event_planning <= 1 || cogitation <= 1 || coordination <= 1 || programming_ability <= 1 || infrastructure_knowledge <= 1 || skill_sum <= 10
           judged_result = {"member_name": member_name, "enlisted_propriety": false}
         else
           judged_result = {"member_name": member_name, "enlisted_propriety": true}
