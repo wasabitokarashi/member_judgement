@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fa67f020-fa76-473c-a32a-e16573ace212" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/api/services/memeber_judge_service.rb" afterDir="false" />
+    <list default="true" id="fa67f020-fa76-473c-a32a-e16573ace212" name="Default Changelist" comment="[fix]本処理の記載修正&#10;&#10;[mod]合計の記載をif文中ではなく、先に定義するように記載">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/api/judgement/v1/member_judge_api.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/api/judgement/v1/member_judge_api.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/services/members/memeber_judge_service.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/services/memeber_judge_service.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/services/memeber_judge_service.rb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -86,14 +84,14 @@
         <counts>
           <entry key="Gemfile" value="1" />
           <entry key="log" value="3" />
-          <entry key="rb" value="4319" />
-          <entry key="txt" value="444" />
+          <entry key="rb" value="4333" />
+          <entry key="txt" value="570" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="477" />
-          <entry key="Ruby" value="4290" />
+          <entry key="PLAIN_TEXT" value="603" />
+          <entry key="Ruby" value="4304" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.lifecycle.project">
@@ -133,8 +131,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/api/services/memeber_judge_service.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1335">
-              <caret line="89" selection-start-line="89" selection-end-line="89" />
+            <state relative-caret-position="599">
+              <caret line="89" column="3" lean-forward="true" selection-start-line="89" selection-start-column="3" selection-end-line="89" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -407,7 +405,7 @@
       <workItem from="1578530448636" duration="9327000" />
       <workItem from="1578551848674" duration="10278000" />
       <workItem from="1578568236305" duration="5173000" />
-      <workItem from="1578617179214" duration="2381000" />
+      <workItem from="1578617179214" duration="2970000" />
     </task>
     <task id="LOCAL-00001" summary="[add]API及び判定logicの完成&#10;&#10;APIクラスにlogicを記載した状態（他ディレクトリへ切り出しを行っていない）">
       <created>1578457557311</created>
@@ -458,14 +456,22 @@
       <option name="project" value="LOCAL" />
       <updated>1578462745884</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="[other]validationと本処理をserviceクラスへ切り出し&#10;&#10;[mod]">
+      <created>1578621373642</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1578621373642</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="102720000" />
+    <option name="totallyTimeSpent" value="103309000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1049" y="-1057" width="1920" height="1057" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49925706" visible="true" weight="0.099574015" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -506,7 +512,8 @@
     <MESSAGE value="[fix]APIの汎用性向上のための切り出し&#10;&#10;[mod]バリデーションやフォーマットの記述をベースとなるクラスに記載を移動" />
     <MESSAGE value="[other]インデント整形&#10;&#10;[mod]" />
     <MESSAGE value="[other]ハッシュ形式のデータの表記変更&#10;&#10;[mod]" />
-    <option name="LAST_COMMIT_MESSAGE" value="[other]ハッシュ形式のデータの表記変更&#10;&#10;[mod]" />
+    <MESSAGE value="[other]validationと本処理をserviceクラスへ切り出し&#10;&#10;[mod]" />
+    <option name="LAST_COMMIT_MESSAGE" value="[other]validationと本処理をserviceクラスへ切り出し&#10;&#10;[mod]" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/docker-compose.yml">
@@ -661,8 +668,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/api/services/memeber_judge_service.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1335">
-          <caret line="89" selection-start-line="89" selection-end-line="89" />
+        <state relative-caret-position="599">
+          <caret line="89" column="3" lean-forward="true" selection-start-line="89" selection-start-column="3" selection-end-line="89" selection-end-column="3" />
         </state>
       </provider>
     </entry>
