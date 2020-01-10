@@ -1,16 +1,16 @@
 module Services
   class MemberJudgeService
 
-    def initialize(member_candidates, judged_candidates_results, judged_result)
+    def initialize(member_candidates, judged_candidates_results)
       @member_candidates = member_candidates
       @judged_candidates_results = judged_candidates_results
-      @judged_result = judged_result
     end
 
     def judge
 
       # バリデーション
       # リスト必須チェック
+
 
       if @member_candidates.blank?
         judged_result = {"error_message": "隊員候補リストは1つ以上の隊員を含んでください。"}
