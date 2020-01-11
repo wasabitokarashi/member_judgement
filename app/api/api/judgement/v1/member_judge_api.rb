@@ -69,12 +69,9 @@ module API
         end
         post '/' do
           member_candidates = params[:member_candidates]
-          judged_candidates_results = []
 
-          member_judge_service = Services::MemberJudgeService.new(member_candidates, judged_candidates_results)
-          member_judge_service.judge
-
-          {judged_candidates_results: judged_candidates_results}
+          member_judge_service = Services::MemberJudgeService.new(member_candidates)
+          {judged_candidates_results: member_judge_service.execute}
         end
       end
     end
