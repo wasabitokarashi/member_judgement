@@ -23,13 +23,19 @@ module Services
         @programming_ability      = member[:programming_ability]
         @infrastructure_knowledge = member[:infrastructure_knowledge]
 
-        if parameter_require_check.present?
-          @judged_candidates_results.push(parameter_require_check)
-        elsif parameter_format_check.present?
-          @judged_candidates_results.push(parameter_format_check)
-        else
-          @judged_candidates_results.push(judge)
+        begin
+          parameter_require_check
+        rescue => e
+          return @judged_candidates_results.push({member_name: @member_name, error_message: e.message})
         end
+
+        begin
+          parameter_format_check
+        rescue => e
+          return @judged_candidates_results.push({member_name: @member_name, error_message: e.message})
+        end
+
+        @judged_candidates_results.push(judge)
       end
 
       @judged_candidates_results
@@ -46,36 +52,22 @@ module Services
 
     # パラメータ必須チェック
     def parameter_require_check
-      if @member_name == ""
-        {"member_name": nil, "error_message": "隊員名を設定してください。"}
-      elsif @event_planning == nil
-        {"member_name": @member_name, "error_message": "イベント企画力を設定してください。"}
-      elsif @cogitation == nil
-        {"member_name": @member_name, "error_message": "思考力を設定してください。"}
-      elsif @coordination == nil
-        {"member_name": @member_name, "error_message": "調整力を設定してください。"}
-      elsif @programming_ability == nil
-        {"member_name": @member_name, "error_message": "プログラム製造力を設定してください。"}
-      elsif @infrastructure_knowledge == nil
-        {"member_name": @member_name, "error_message": "基本理解を設定してください。"}
-      end
+      raise "隊員名を設定してください。" if @member_name.blank?
+      raise "イベント企画力を設定してください。" if @event_planning.blank?
+      raise "思考力を設定してください。" if @cogitation.blank?
+      raise "調整力を設定してください。" if @coordination.blank?
+      raise "プログラム製造力を設定してください。" if @programming_ability.blank?
+      raise "基本理解を設定してください。" if @infrastructure_knowledge.blank?
     end
 
     # パラメータ形式チェック
     def parameter_format_check
-      if @member_name == "#{@member_name.to_i}"
-        {"member_name": nil, "error_message": "隊員名は文字列で入力してください。"}
-      elsif @event_planning < 1 || 5 < @event_planning
-        {"member_name": @member_name, "error_message": "イベント企画力は1から5までの数値を設定してください。"}
-      elsif @cogitation < 1 || 5 < @cogitation
-        {"member_name": @member_name, "error_message": "思考力は1から5までの数値を設定してください。"}
-      elsif @coordination < 1 || 5 < @coordination
-        {"member_name": @member_name, "error_message": "調整力は1から5までの数値を設定してください。"}
-      elsif @programming_ability < 1 || 5 < @programming_ability
-        {"member_name": @member_name, "error_message": "プログラム製造力は1から5までの数値を設定してください。"}
-      elsif @infrastructure_knowledge < 1 || 5 < @infrastructure_knowledge
-        {"member_name": @member_name, "error_message": "基盤理解は1から5までの数値を設定してください。"}
-      end
+      raise "隊員名は文字列で入力してください。" unless @member_name !~ /\A[0-9]+\z/
+      raise "イベント企画力は1から5までの数値を設定してください。" if @event_planning < 1 || 5 < @event_planning
+      raise "思考力は1から5までの数値を設定してください。" if @cogitation < 1 || 5 < @cogitation
+      raise "調整力は1から5までの数値を設定してください。" if @coordination < 1 || 5 < @coordination
+      raise "プログラム製造力は1から5までの数値を設定してください。" if @programming_ability < 1 || 5 < @programming_ability
+      raise "基盤理解は1から5までの数値を設定してください。" if @infrastructure_knowledge < 1 || 5 < @infrastructure_knowledge
     end
 
     # 本処理
@@ -90,3 +82,15 @@ module Services
     end
   end
 end
+
+
+
+###かずしに教えてもらったやり方(parameter_format_check)###
+# ability_range_valid!(@event_planning, "イベント企画力は1から5までの数値を設定してください。")
+# ability_range_valid!('', error_message)
+# ability_range_valid!('ability', error_message)
+# ability_range_valid!('ability', error_message)
+# ability_range_valid!('ability', error_message)
+# def ability_range_valid!(ability, error_message)
+#   return {"member_name": @member_name, "error_message": "イベント企画力は1から5までの数値を設定してください。"} if @event_planning < 1 || 5 < @event_planning
+# end
