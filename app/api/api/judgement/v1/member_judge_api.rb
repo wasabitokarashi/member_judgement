@@ -5,6 +5,7 @@ module API
         format :json
         default_format :json
 
+
         include Services
 
         # helpers do
@@ -57,22 +58,23 @@ module API
         #   end
         # end
 
-        params do
-          optional :member_candidates, type: Array do
-            optional :member_name,              type: String
-            optional :event_planning,           type: Integer
-            optional :cogitation,               type: Integer
-            optional :coordination,             type: Integer
-            optional :programming_ability,      type: Integer
-            optional :infrastructure_knowledge, type: Integer
-          end
-        end
-        post '/' do
-          member_candidates = params[:member_candidates]
 
-          member_judge_service = Services::MemberJudgeService.new(member_candidates)
-          {judged_candidates_results: member_judge_service.execute}
-        end
+          params do
+            requires :member_candidates, type: Array do
+              optional :member_name,              type: String
+              optional :event_planning,           type: Integer
+              optional :cogitation,               type: Integer
+              optional :coordination,             type: Integer
+              optional :programming_ability,      type: Integer
+              optional :infrastructure_knowledge, type: Integer
+            end
+          end
+          post '/' do
+            member_candidates = params[:member_candidates]
+
+            member_judge_service = Services::MemberJudgeService.new(member_candidates)
+            {judged_candidates_results: member_judge_service.execute}
+          end
       end
     end
   end

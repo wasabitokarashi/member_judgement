@@ -1,8 +1,9 @@
 module API
   module Judgement
     class NoRoute < Grape::API
-      rescue_from Grape::Exceptions::ValidationErrors do |e|
-        rack_response e.to_json, 400
+      rescue_from Exception do |e|
+        binding.pry
+        rack_response({ message: e.message, status: 404 }.to_json, 404)
       end
     end
   end

@@ -5,8 +5,8 @@ module API
         prefix 'api' # /apiというパスになる
         version 'v1', using: :path # /api/v1というパスになる
 
-        rescue_from ActiveRecord::RecordNotFound do |e|
-          rack_response({ message: e.message, status: 404 }.to_json, 404)
+        rescue_from Grape::Exceptions::ValidationErrors do |e|
+          rack_response e.to_json, 400
         end
 
         rescue_from :all do |e|
